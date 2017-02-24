@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{194CC0DB-57AB-4A49-94F5-063B72F6CA4D}</ProjectGuid>
+    <RootNamespace>DTSLAM</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\code\dtslam\BaseRansac.h" />
+    <ClInclude Include="..\code\dtslam\BundleAdjuster.h" />
+    <ClInclude Include="..\code\dtslam\CameraDistortionModel.h" />
+    <ClInclude Include="..\code\dtslam\CameraModel.h" />
+    <ClInclude Include="..\code\dtslam\CameraModelCeres.h" />
+    <ClInclude Include="..\code\dtslam\CeresParametrization.h" />
+    <ClInclude Include="..\code\dtslam\CeresUtils.h" />
+    <ClInclude Include="..\code\dtslam\cvutils.h" />
+    <ClInclude Include="..\code\dtslam\EpipolarSegmentError.h" />
+    <ClInclude Include="..\code\dtslam\EpipolarSegmentErrorImpl.hpp" />
+    <ClInclude Include="..\code\dtslam\EssentialEstimation.h" />
+    <ClInclude Include="..\code\dtslam\EssentialUtils.h" />
+    <ClInclude Include="..\code\dtslam\FeatureIndexer.h" />
+    <ClInclude Include="..\code\dtslam\FeatureMatcher.h" />
+    <ClInclude Include="..\code\dtslam\flags.h" />
+    <ClInclude Include="..\code\dtslam\FrameLinker.h" />
+    <ClInclude Include="..\code\dtslam\HomographyEstimation.h" />
+    <ClInclude Include="..\code\dtslam\ImagePyramid.h" />
+    <ClInclude Include="..\code\dtslam\log.h" />
+    <ClInclude Include="..\code\dtslam\MatchRefiner.h" />
+    <ClInclude Include="..\code\dtslam\PatchWarper.h" />
+    <ClInclude Include="..\code\dtslam\PnpEstimation.h" />
+    <ClInclude Include="..\code\dtslam\Pose3D.h" />
+    <ClInclude Include="..\code\dtslam\Pose3DCeres.h" />
+    <ClInclude Include="..\code\dtslam\PoseEstimation.h" />
+    <ClInclude Include="..\code\dtslam\PoseEstimationCommon.h" />
+    <ClInclude Include="..\code\dtslam\PoseTracker.h" />
+    <ClInclude Include="..\code\dtslam\Profiler.h" />
+    <ClInclude Include="..\code\dtslam\ReprojectionError3D.h" />
+    <ClInclude Include="..\code\dtslam\ReprojectionError3DImpl.hpp" />
+    <ClInclude Include="..\code\dtslam\RotationEstimation.h" />
+    <ClInclude Include="..\code\dtslam\Serializer.h" />
+    <ClInclude Include="..\code\dtslam\shared_mutex.h" />
+    <ClInclude Include="..\code\dtslam\SlamKeyFrame.h" />
+    <ClInclude Include="..\code\dtslam\SlamMap.h" />
+    <ClInclude Include="..\code\dtslam\SlamMapExpander.h" />
+    <ClInclude Include="..\code\dtslam\SlamSystem.h" />
+    <ClInclude Include="..\code\dtslam\stdutils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\code\dtslam\BundleAdjuster.cpp" />
+    <ClCompile Include="..\code\dtslam\CameraDistortionModel.cpp" />
+    <ClCompile Include="..\code\dtslam\CameraModel.cpp" />
+    <ClCompile Include="..\code\dtslam\CeresParametrization.cpp" />
+    <ClCompile Include="..\code\dtslam\cvutils.cpp" />
+    <ClCompile Include="..\code\dtslam\EssentialEstimation.cpp" />
+    <ClCompile Include="..\code\dtslam\FeatureMatcher.cpp" />
+    <ClCompile Include="..\code\dtslam\flags.cpp" />
+    <ClCompile Include="..\code\dtslam\FrameLinker.cpp" />
+    <ClCompile Include="..\code\dtslam\HomographyEstimation.cpp" />
+    <ClCompile Include="..\code\dtslam\ImagePyramid.cpp" />
+    <ClCompile Include="..\code\dtslam\log.cpp" />
+    <ClCompile Include="..\code\dtslam\MatchRefiner.cpp" />
+    <ClCompile Include="..\code\dtslam\PatchWarper.cpp" />
+    <ClCompile Include="..\code\dtslam\PnpEstimation.cpp" />
+    <ClCompile Include="..\code\dtslam\Pose3D.cpp" />
+    <ClCompile Include="..\code\dtslam\PoseEstimation.cpp" />
+    <ClCompile Include="..\code\dtslam\PoseTracker.cpp" />
+    <ClCompile Include="..\code\dtslam\Profiler.cpp" />
+    <ClCompile Include="..\code\dtslam\ReprojectionError3D.cpp" />
+    <ClCompile Include="..\code\dtslam\RotationEstimation.cpp" />
+    <ClCompile Include="..\code\dtslam\Serializer.cpp" />
+    <ClCompile Include="..\code\dtslam\SlamKeyFrame.cpp" />
+    <ClCompile Include="..\code\dtslam\SlamMap.cpp" />
+    <ClCompile Include="..\code\dtslam\SlamMap2.cpp" />
+    <ClCompile Include="..\code\dtslam\SlamMapExpander.cpp" />
+    <ClCompile Include="..\code\dtslam\SlamSystem.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
